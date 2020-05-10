@@ -1,0 +1,12 @@
+esx1.example.com
+esx2.example.com
+esx3.example.com
+esx4.example.com
+esx5.example.com
+esx6.example.com
+esx7.example.com
+esx8.example.com
+
+
+
+
