@@ -18,7 +18,8 @@ foreach ($stand in $stands) {
     #Start VMs and answer question
     $vms = Get-VM | Where-Object { $_.PowerState -eq 'PoweredOff' }
     foreach ($vm in $vms) {
-        Get-VM $vm | Start-VM | Get-VMQuestion | Set-VMQuestion -DefaultOption 
+        Get-VM $vm | Start-VM 
+        Get-VM $vm | Get-VMQuestion | Set-VMQuestion -DefaultOption -Confirm:$false -ErrorAction Ignore
     }
     #Disconnect
     Disconnect-VIServer -Confirm:$false
